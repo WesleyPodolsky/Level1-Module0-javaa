@@ -26,33 +26,44 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address” )
-
+		String imageAdress = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2GQcEGw7vGWaPXIuDst1fyhJTyVMbDUaiSgLqGM-8JrpXnzS-GQJehP0FPZI&s";
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component image;
 		// 3. use the "createImage()" method below to initialize your Component
-
+		image = createImage(imageAdress);
 		// 4. add the image to the quiz window
-
+		quizWindow.add(image);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		String answer = JOptionPane.showInputDialog("(LOWERCASE) what is the name of this pokemon?");
 		// 7. print "CORRECT" if the user gave the right answer
-
+		if(answer.equals("zoroark")) {
+			System.out.println("CORRECT");
+		}else {
+			System.out.println("INCORRECT");
+		}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+		quizWindow.remove(image);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+		String imageAdress2 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5aMnWT3cCdxscxhi-Yz3wAwSYDbL_6mON-R0O80l9PmaLG5Z_ondZdYaxVw&s";
+		Component image2;
+		image2 = createImage(imageAdress2);
 		// 11. add the second image to the quiz window
-
+		quizWindow.add(image2);
 		// 12. pack the quiz window
-
+		quizWindow.pack();
 		// 13. ask another question
-
+		String answer2 = JOptionPane.showInputDialog("(LOWERCASE) what is the name of this pokemon?");
+		if(answer2.equals("zeraora")) {
+			System.out.println("CORRECT");
+		}else {
+			System.out.println("INCORRECT");
+		}
 		// 14+ check answer, say if correct or incorrect, etc.
 
 	}
